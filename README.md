@@ -7,7 +7,7 @@ Esta biblioteca permite validar fechas con un determinado formato.
 
 - Si usas cl.exe (de Visual Studio) como  compilador de C/C++, debes agregar lo siguiente:
 
-  - La biblioteca estática llamada libpscanf.lib la debes añadir en la carpeta `lib` y se lo encuentra en la siguiente ruta:            	`C:\Program Files\Microsoft Visual Studio 12.0\VC\lib`
+  - La biblioteca estática llamada libfdate.lib la debes añadir en la carpeta `lib` y se lo encuentra en la siguiente ruta:            	`C:\Program Files\Microsoft Visual Studio 12.0\VC\lib`
 	
 	Para evitar esta posible advertencia del enlazador: 
 	`warning LNK4099: PDB 'libfdate.pdb' was not found with 'libfdate.pdb.lib' or at 'libfdate.pdb'; linking object as if no debug info`
@@ -25,7 +25,7 @@ Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo fdate
 ```
 - Si usas Dev-C++ como IDE(Entorno de desarrollo integrado) para compilar códigos de C/C++, debes agregar lo siguiente:
 
-  - La biblioteca estática llamada libpscanf.a la debes añadir en la carpeta `lib` y se lo encuentra en la siguiente ruta: 
+  - La biblioteca estática llamada libfdate.a la debes añadir en la carpeta `lib` y se lo encuentra en la siguiente ruta: 
   `C:\Program Files\Dev-Cpp\lib`
 	
 	Luego de añadir la biblioteca, abrimos el Dev-C++ y nos vamos a la sección de Proyecto -> Opciones del proyecto -> Parámetros -> Linker (en esta opción agregas el siguiente comando: -lfdate) .
