@@ -19,7 +19,7 @@ Esta biblioteca permite validar fechas con un determinado formato.
   - El archivo de cabecera llamado fdate.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
 	`C:\Program Files\Microsoft Visual Studio 12.0\VC\include`
  
-Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo pscanf.h en el archivo de origen (donde está el main):
+Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo fdate.h en el archivo de origen (donde está el main):
 ```C
 #include <fdate.h>
 ```
