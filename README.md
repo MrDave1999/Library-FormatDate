@@ -16,7 +16,7 @@ Esta biblioteca permite validar fechas con un determinado formato.
 	
 	Luego de añadir la biblioteca y el archivo .PDB, abrimos el Visual Studio y nos vamos a la sección de Proyecto -> Propiedades de configuración -> Vinculador -> Entrada -> Dependencias adicionales (en esta opción agregas el nombre de la biblioteca estática con su respectiva extensión .lib) .
 	
-  - El archivo de cabecera llamado pscanf.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
+  - El archivo de cabecera llamado fdate.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
 	`C:\Program Files\Microsoft Visual Studio 12.0\VC\include`
  
 Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo pscanf.h en el archivo de origen (donde está el main):
@@ -30,7 +30,7 @@ Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo pscan
 	
 	Luego de añadir la biblioteca, abrimos el Dev-C++ y nos vamos a la sección de Proyecto -> Opciones del proyecto -> Parámetros -> Linker (en esta opción agregas el siguiente comando: -lfdate) .
 	
-  - El archivo de cabecera llamado pscanf.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
+  - El archivo de cabecera llamado fdate.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
   `C:\Program Files\Dev-Cpp\include`
   
 La biblioteca y el archivo de cabecera lo debes descargar aquí: [Library-FormatDate](https://github.com/MrDave1999/Library-FormatDate/releases/tag/v1.0)
