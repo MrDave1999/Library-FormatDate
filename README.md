@@ -188,7 +188,7 @@ int main()
 	yearCurrent = 1900 + tm->tm_year;
 	do
 	{
-		strread(&dateStr, "Ingrese su fecha de nacimiento (Formato: yyyy/dd/mm) \n");
+		strread(&dateStr, "Ingrese su fecha de nacimiento (Formato: yyyy/mm/dd) \n");
 	} while (Tryparse("yyyy/dd/mm", dateStr.s, &date));
 	printf("Tu Edad es de: %d anios\n", yearCurrent - date.year);
 	pause();
