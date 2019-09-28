@@ -3,10 +3,9 @@
 
 #include <stdint.h>
 
-#define FORMAT_1	0 /* yyyy/mm/dd */
-#define FORMAT_2	1 /* yyyy-mm-dd */
-#define FORMAT_3	2 /* dd/mm/yyyy */
-#define FORMAT_4	3 /* dd-mm-yyyy */
+/* Formatos generales */
+#define yyyyMMdd (0)
+#define ddMMyyyy (1)
 
 struct _Weekday
 {
@@ -32,23 +31,16 @@ typedef struct _InfoMonth InfoMonth;
 
 /* 
 	-> CountSign:
-	Esta función detecta como máximo dos signos (ya sea el slash o guion) en el string.
-	Además también verifica si el string es númerico.
+	Esta función detecta como máximo dos signos (ya sea el slash o guion) en la fecha.
+	Además también verifica si la fecha tiene valores númericos.
 */
-uint8_t CountSign(const char*, const uint8_t);
-
-/*
-	-> CountNumberSign:
-	Esta función cuenta los dígitos que estén alrededor del signo (slash o guion).
-	Si el formato es yyyy/mm/dd, la función al principio contará los dígitos del año, luego del mes y por último los días.
-*/
-uint8_t CountNumberSign(const char*, const uint8_t);
+uint8_t CountSign(const char*, const uint8_t, const uint8_t);
 
 /*
 	-> ConvertDateToInt:
 	Esta función convierte la fecha a valores númericos (día, mes, año).
 */
-void ConvertDateToInt(const char*, Date* const, const uint8_t);
+void ConvertDateToInt(const char*, Date* const, const uint8_t, const uint8_t);
 
 /*
 	-> ValidDMY:
@@ -56,4 +48,4 @@ void ConvertDateToInt(const char*, Date* const, const uint8_t);
 */
 uint8_t ValidDMY(const InfoMonth* const, const Date* const date);
 
-#endif /* _VALID_H */
+#endif /* _VALID_H *
