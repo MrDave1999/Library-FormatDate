@@ -6,6 +6,7 @@
 #define ES 0
 #define EN 1
 
+/* Macro para saber si el año es bisiesto o no */
 #define YearLeap(year) ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
 
 struct _Date
