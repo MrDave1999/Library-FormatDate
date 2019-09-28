@@ -3,6 +3,9 @@
 #include "fdate.h"
 #include "valid.h"
 
+/* Para detectar si el signo es slash, punto o guion */
+#define Sign formatid == yyyyMMdd ? format[4] : format[2]
+
 const struct _Weekday weekday[7] =
 {
 	{ "Domingo",	"Sunday"	},
@@ -58,19 +61,21 @@ int GetWeekday(const Date* const date)
 
 uint8_t Tryparse(const char* const format, const char* const buf, Date* const date)
 {
-	const uint8_t formatid = ((format[0] == 'y' && format[4] == '/') ? (0) : //Formato: yyyy/mm/dd
-		((format[0] == 'y' && format[4] == '-') ? (1) : //Formato: yyyy-mm-dd
-		((format[0] == 'd' && format[2] == '/') ? (2) : //Formato: dd/mm/yyy
-		((format[0] == 'd' && format[2] == '-') ? (3) : //Formato: dd-mm-yyyy
-		(4))))) //Formato erróneo.
-	;
-	if (CountSign(buf, formatid) || CountNumberSign(buf, formatid))
+	/* Detectar el tipo de formato */
+	const uint8_t formatid = (format[0] == 'y') ? (yyyyMMdd) : (ddMMyyyy);
+	const char* i;
+	size_t len = 0;
+	/* Obtiene la longitud del búfer */
+	for (i = buf; *i != '\0'; ++i)
+		++len;
+
+	if (CountSign(buf, formatid, Sign) || (!(len >= 8 && len <= 10)))
 	{
 		printf("Error: No estas cumpliendo con el formato esperado: %s\n", format);
 		return 1;
 	}
 
-	ConvertDateToInt(buf, date, formatid);
+	ConvertDateToInt(buf, date, formatid, Sign);
 	
 	return ValidDMY(iMonth, date) ? (1) : (0);
 }
