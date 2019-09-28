@@ -1,5 +1,5 @@
 # Library-FormatDate
-[![pscanf.h](https://shields.southcla.ws/badge/FormatDate-v1.0-2f2f2f.svg?style=flat-square)](https://github.com/MrDave1999/Library-FormatDate)
+[![pscanf.h](https://shields.southcla.ws/badge/FormatDate-v1.3-2f2f2f.svg?style=flat-square)](https://github.com/MrDave1999/Library-FormatDate)
 
 Esta biblioteca permite validar fechas con un determinado formato.
 
@@ -33,7 +33,7 @@ Cuando hayas hecho los dos pasos anteriores, procedes a incluir el archivo fdate
   - El archivo de cabecera llamado fdate.h la debes añadir en la carpeta `include` y se lo encuentra en la siguiente ruta:
   `C:\Program Files\Dev-Cpp\include`
   
-La biblioteca y el archivo de cabecera lo debes descargar aquí: [Library-FormatDate](https://github.com/MrDave1999/Library-FormatDate/releases/tag/v1.0)
+La biblioteca y el archivo de cabecera lo debes descargar aquí: [Library-FormatDate](https://github.com/MrDave1999/Library-FormatDate/releases/tag/v1.3)
 
 ## Funciones
 
@@ -82,6 +82,8 @@ Valida la fecha con un formato.
     - yyyy-mm-dd
     - dd/mm/yyyy
     - dd-mm-yyyy
+    - yyyy.mm.dd
+    - dd.mm.yyyy
 
 `const char* const buf`: Este puntero recibe la dirección base de un búfer (básicamente ahí es donde está la fecha a validar).
 
@@ -108,7 +110,7 @@ int main(void)
 
 - ### GetNameWeekday
 
-`const char* GetNameWeekday(uint8_t code, uint8_t language)`
+`const char* GetNameWeekday(uint8_t code, uint8_t language);`
 
 Obtiene el nombre del día de la semana, ya sea en español o inglés.
 
@@ -138,7 +140,7 @@ int main(void)
 
 - ### GetNameMonth
 
-`const char* GetNameMonth(uint8_t codeMonth, uint8_t language)`
+`const char* GetNameMonth(uint8_t codeMonth, uint8_t language);`
 
 Obtiene el nombre del mes, ya sea en español o inglés.
 
